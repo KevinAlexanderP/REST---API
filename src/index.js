@@ -18,7 +18,7 @@ app.use(express.json())
 
 //routes
 app.use('/api' , require('../routes/index'))
-app.use('/api',require('../routes/movies'))
+app.use('/api/movies',require('../routes/movies'))
 // Starting server
 app.listen(app.get('port'), ()=>{
     console.log(`Server on port 3000 ${app.get('port')}`)
