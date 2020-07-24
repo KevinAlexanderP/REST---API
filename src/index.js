@@ -17,8 +17,8 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
 //routes
-app.use(require('../routes/index'))
-app.use(require('../routes/movies'))
+app.use('/api' , require('../routes/index'))
+app.use('/api',require('../routes/movies'))
 // Starting server
 app.listen(app.get('port'), ()=>{
     console.log(`Server on port 3000 ${app.get('port')}`)
